@@ -1,8 +1,8 @@
 import { google } from "@ai-sdk/google";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import { SYSTEM_PROMPT, MAX_DURATION } from "@/lib/ai/config";
+import { SYSTEM_PROMPT } from "@/lib/ai/config";
 
-export const maxDuration = MAX_DURATION;
+export const maxDuration = 30;
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
